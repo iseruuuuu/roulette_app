@@ -34,6 +34,8 @@ class HomeScreen extends StatelessWidget {
 
                       const Spacer(),
                       FortuneBar(
+                        //高さ
+                        height: 130,
                         selected: controller.streamController.stream,
                         items: const [
                           //TODO ここの値も変わる
@@ -66,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       GestureDetector(
-                        onTap: controller.onTap,
+                        onTap: controller.onTapAddScreen,
                         child: Container(
                           color: Colors.grey,
                           width: double.infinity,
