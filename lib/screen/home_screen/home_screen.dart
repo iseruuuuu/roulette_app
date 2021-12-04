@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade100,
+        backgroundColor: Colors.amber,
         elevation: 0,
       ),
       body:
@@ -26,14 +26,32 @@ class HomeScreen extends StatelessWidget {
                       FortuneBar(
                         selected: controller.streamController.stream,
                         items: const [
+                          //TODO ここの値も変わる
                           FortuneItem(child: RouletteText(text: 'あああ')),
                           FortuneItem(child: RouletteText(text: 'いいい')),
                           FortuneItem(child: RouletteText(text: 'ううう')),
+                          FortuneItem(child: RouletteText(text: 'えええ')),
+                          FortuneItem(child: RouletteText(text: 'おおお')),
+                          FortuneItem(child: RouletteText(text: 'かかか')),
                         ],
                       ),
-                      TextButton(
-                        onPressed: controller.onTap,
-                        child: const Text('Start'),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width / 2,
+                        height: MediaQuery.of(context).size.width / 7,
+                        child: ElevatedButton(
+                          onPressed: controller.onTap,
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.white,
+                          ),
+                          child: const Text(
+                            'Start',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
                       ),
                     ],
                   ),
