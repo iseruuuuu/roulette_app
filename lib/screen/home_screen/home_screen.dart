@@ -21,8 +21,18 @@ class HomeScreen extends StatelessWidget {
           (controller.item.value == 0)
               ? Center(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
+                      const Spacer(),
+                      const Text(
+                          '結果 : ',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+
+                      const Spacer(),
                       FortuneBar(
                         selected: controller.streamController.stream,
                         items: const [
@@ -35,6 +45,7 @@ class HomeScreen extends StatelessWidget {
                           FortuneItem(child: RouletteText(text: 'かかか')),
                         ],
                       ),
+                      const Spacer(),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 2,
                         height: MediaQuery.of(context).size.width / 7,
@@ -49,6 +60,25 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.black,
                               fontSize: 30,
                               fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const Spacer(),
+                      GestureDetector(
+                        onTap: controller.onTap,
+                        child: Container(
+                          color: Colors.grey,
+                          width: double.infinity,
+                          height: 60,
+                          child: const Center(
+                            child: Text(
+                              'データをセット',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
