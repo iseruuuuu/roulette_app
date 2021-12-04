@@ -3,6 +3,7 @@ import 'package:roulette_app/model/todo.dart';
 
 class AddScreenController extends GetxController {
   final _todos = <Todo>[].obs;
+  final contents = ''.obs;
 
   @override
   void onInit() {
@@ -14,11 +15,15 @@ class AddScreenController extends GetxController {
   List<Todo> get todos => _todos;
 
   void addTodo(String description) {
-    final todo = Todo(description: description);
+    final todo = Todo(description: contents.value);
     _todos.add(todo);
   }
 
   void remove(Todo todo) {
-    _todos.remove(todo); // 等価性overrideしたのでOK
+    _todos.remove(todo);
+  }
+
+  void onChanged(String text) {
+    contents.value = text;
   }
 }

@@ -14,12 +14,6 @@ class AddScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        actions: [
-          IconButton(
-            onPressed: () => controller.addTodo('ss'),
-            icon: const Icon(Icons.add),
-          ),
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
@@ -52,8 +46,9 @@ class AddScreen extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: deviceSize.width - 110,
-                      child: const TextField(
-                        style: TextStyle(
+                      child: TextField(
+                        onChanged: (text) => controller.onChanged(text),
+                        style: const TextStyle(
                           fontSize: 30.0,
                           color: Colors.black,
                         ),
