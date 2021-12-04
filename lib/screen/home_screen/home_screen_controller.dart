@@ -8,6 +8,7 @@ class HomeScreenController extends GetxController {
   StreamController<int> streamController = StreamController<int>();
   final item = 0.obs;
   final random = math.Random();
+  final resultText = 'aaasss'.obs;
 
   @override
   void onInit() {
@@ -15,7 +16,12 @@ class HomeScreenController extends GetxController {
   }
 
   void onTap() {
+    //乱数を出す。
     var n = random.nextInt(3);
+
+    //乱数の値のリストの文字を探していれる。
+
+    //ルーレットで値を入れる
     streamController.add(n);
   }
 

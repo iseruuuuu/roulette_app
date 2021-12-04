@@ -23,15 +23,14 @@ class HomeScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       const Spacer(),
-                      const Text(
-                          '結果 : ____________ ',
-                        style: TextStyle(
+                      Text(
+                        '結果 : ${controller.resultText.value} ',
+                        style: const TextStyle(
                           color: Colors.black,
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-
                       const Spacer(),
                       FortuneBar(
                         //高さ
