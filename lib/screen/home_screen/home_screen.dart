@@ -34,6 +34,7 @@ class HomeScreen extends StatelessWidget {
                       const Spacer(),
                       FortuneBar(
                           height: 130,
+                          animateFirst: false,
                           duration: const Duration(seconds: 3),
                           selected: controller.streamController.stream,
                           items: [

@@ -10,28 +10,15 @@ class HomeScreenController extends GetxController {
   final random = math.Random();
   final resultText = 'aaasss'.obs;
 
-  // AudioCache audioCache = AudioCache();
-  // AudioPlayer advancedPlayer = AudioPlayer();
-  // String? localFilePath;
-  // String? localAudioCacheURI;
-  //
-  // static const SOUND_DATA_UP = 'drum_sound.mp3';
-
-  // final AudioCache _cache = AudioCache(
-  //   fixedPlayer: AudioPlayer(),
-  // );
-
   final AudioCache _player = AudioCache();
 
   final items = <String>[
-    'Grogu',
-    'Mace Windu',
-    'Obi-Wan Kenobi',
-    'Han Solo',
-    'Luke Skywalker',
-    'Darth Vader',
-    'Yoda',
-    'Ahsoka Tano',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
   ].obs;
 
   @override
@@ -41,7 +28,7 @@ class HomeScreenController extends GetxController {
 
   void onTap() {
     //乱数を出す。
-    var n = random.nextInt(3);
+    var n = random.nextInt(6);
 
     //乱数の値のリストの文字を探していれる。
 
