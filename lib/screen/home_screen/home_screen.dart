@@ -33,19 +33,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       FortuneBar(
-                        //高さ
-                        height: 130,
-                        selected: controller.streamController.stream,
-                        items: const [
-                          //TODO ここの値も変わる
-                          FortuneItem(child: RouletteText(text: 'あああ')),
-                          FortuneItem(child: RouletteText(text: 'いいい')),
-                          FortuneItem(child: RouletteText(text: 'ううう')),
-                          FortuneItem(child: RouletteText(text: 'えええ')),
-                          FortuneItem(child: RouletteText(text: 'おおお')),
-                          FortuneItem(child: RouletteText(text: 'かかか')),
-                        ],
-                      ),
+                          //高さ
+                          height: 130,
+                          duration: const Duration(seconds: 3),
+                          selected: controller.streamController.stream,
+                          items: [
+                            for (var it in controller.items) FortuneItem(child: Text(it)),
+                            //TODO ここの値も変わる
+                          ]),
                       const Spacer(),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 2,
