@@ -33,7 +33,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       FortuneBar(
-                          //高さ
                           height: 130,
                           duration: const Duration(seconds: 3),
                           selected: controller.streamController.stream,
