@@ -60,7 +60,9 @@ class AddScreen extends StatelessWidget {
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.addTodo('ああ');
+                      },
                       child: Text('追加'),
                     ),
                   ],

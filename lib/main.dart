@@ -13,6 +13,10 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      // TODO:SharedPreferencesの保存データを読み込んでここに設定
+      themeMode: ThemeMode.system,
+      // TODO:SharedPreferencesの保存データを読み込んでここに設定
+      locale: null,
       home: HomeScreen(),
     );
   }
