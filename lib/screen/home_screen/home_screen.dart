@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       const Spacer(),
                       const Text(
-                          '結果 : ',
+                          '結果 : ____________ ',
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 30,
