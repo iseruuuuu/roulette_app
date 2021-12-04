@@ -38,7 +38,12 @@ class HomeScreen extends StatelessWidget {
                           duration: const Duration(seconds: 3),
                           selected: controller.streamController.stream,
                           items: [
-                            for (var it in controller.items) FortuneItem(child: Text(it)),
+                            for (var index in controller.items)
+                              FortuneItem(
+                                child: RouletteText(
+                                  text: index,
+                                ),
+                              ),
                             //TODO ここの値も変わる
                           ]),
                       const Spacer(),
