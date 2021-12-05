@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:roulette_app/model/todo.dart';
 import 'package:roulette_app/screen/roulette_screen/roulette_screen.dart';
@@ -33,7 +35,12 @@ class AddScreenController extends GetxController {
 
   void onTap() {
     if (todos.isEmpty) {
-      //TODO 空を知らせるものを追加する（スナックバーとか？？）
+      Get.snackbar(
+        "値を登録してください",
+        "ルーレットを行うために1つ以上の登録が必要です!!",
+        snackPosition: SnackPosition.TOP,
+        backgroundColor: Colors.white,
+      );
     } else {
       Get.to(() => RouletteScreen(rouletteItem: todos));
     }
