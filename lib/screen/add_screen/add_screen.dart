@@ -14,6 +14,7 @@ class AddScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
+        //TODO 色をiOSみたいにしたい!!
         backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () => controller.onTapTutorial(),
@@ -23,6 +24,7 @@ class AddScreen extends StatelessWidget {
           TextButton(
             onPressed: () => controller.onTap(),
             child: const Text(
+              //TODO 文言を変更したい!!
               '追加',
               style: TextStyle(
                 fontSize: 20,
@@ -64,6 +66,8 @@ class AddScreen extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: deviceSize.width - 120,
+
+                      //TODO 文字のサイズとかを調整したい!!
                       child: TextField(
                         onChanged: (text) => controller.onChanged(text),
                         style: const TextStyle(
@@ -72,6 +76,7 @@ class AddScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    //TODO ボタンのデザインを変更したい!!
                     ElevatedButton(
                       onPressed: () {
                         controller.addTodo(controller.contents.value);
