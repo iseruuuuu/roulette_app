@@ -1,34 +1,30 @@
 import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
-import 'package:roulette_app/model/todo.dart';
-import 'package:roulette_app/screen/add_screen/add_screen_controller.dart';
-import 'package:roulette_app/screen/roulette_screen/roulette_screen.dart';
 import 'dart:math' as math;
-import '../add_screen/add_screen.dart';
+import '../../model/todo.dart';
 
 class RouletteScreenController extends GetxController {
   StreamController<int> streamController = StreamController<int>();
   final item = 0.obs;
   final random = math.Random();
-  //後でいれる
   final resultText = ''.obs;
   final AudioCache _player = AudioCache();
+  final List<Todo> listItem;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  RouletteScreenController({
+    required this.listItem,
+  });
 
   void onTap() {
-    //乱数を出す。
-    var n = random.nextInt(100);
     //乱数の値のリストの文字を探していれる。
-    //print(_todos[1].description);
-    //効果音を入れたい
+    var n = random.nextInt(listItem.length);
+    //効果音を入れる。
     _player.play('drum_sound.mp3');
-    //ルーレットで値を入れる
+    //ルーレットで値を入れる。
     streamController.add(n);
+    //結果をテキストに反映する。
+    resultText.value = listItem[n].description;
   }
 
   void onTapAddScreen() {

@@ -15,7 +15,7 @@ class RouletteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(RouletteScreenController(), tag: rouletteItem[0].description);
+    final controller = Get.put(RouletteScreenController(listItem: rouletteItem), tag: rouletteItem[0].description);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
@@ -27,12 +27,13 @@ class RouletteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Spacer(),
-                  Text(
-                    '結果 : ${controller.resultText.value} ',
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
+                  Obx(() => Text(
+                      '結果 : ${controller.resultText.value} ',
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                   const Spacer(),
