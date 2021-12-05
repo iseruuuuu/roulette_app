@@ -18,7 +18,7 @@ class AddScreen extends StatelessWidget {
         leading: IconButton(
           onPressed: () => controller.onTapTutorial(),
           icon: const Icon(
-              Icons.apps,
+            Icons.apps,
             color: Colors.black,
           ),
         ),
@@ -43,7 +43,8 @@ class AddScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 10,
-              child: Obx(() {
+              child: Obx(
+                () {
                   final todos = controller.todos;
                   return ListView.builder(
                     itemCount: todos.length,
@@ -79,10 +80,21 @@ class AddScreen extends StatelessWidget {
                     ),
                     //TODO ボタンのデザインを変更したい!!
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        elevation: 30,
+                      ),
                       onPressed: () {
                         controller.addTodo(controller.contents.value);
                       },
-                      child: const Text('追加'),
+                      child: const Text(
+                        '追加',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ],
                 ),
