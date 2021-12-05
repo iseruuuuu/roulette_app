@@ -11,6 +11,9 @@ class AddScreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+
+    //TODO チュートリアル画面を出す。
+    onTapShowTutorial();
   }
 
 // TODO:フィルタの状態によって返すTodoを変える
@@ -44,5 +47,9 @@ class AddScreenController extends GetxController {
     } else {
       Get.to(() => RouletteScreen(rouletteItem: todos));
     }
+  }
+
+  void onTapShowTutorial() {
+
   }
 }
