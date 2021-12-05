@@ -13,6 +13,7 @@ class AddScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.blue,
         leading: IconButton(
           onPressed: () => controller.onTapTutorial(),
