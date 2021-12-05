@@ -33,9 +33,8 @@ class AddScreenController extends GetxController {
 
   void onTap() {
     if (todos.isEmpty) {
-      print('空です');
+      //TODO 空を知らせるものを追加する（スナックバーとか？？）
     } else {
-      //とりあえず、空にする
       Get.to(() => RouletteScreen(rouletteItem: todos));
     }
   }
