@@ -57,7 +57,7 @@ class AddScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     SizedBox(
-                      width: deviceSize.width - 110,
+                      width: deviceSize.width - 120,
                       child: TextField(
                         onChanged: (text) => controller.onChanged(text),
                         style: const TextStyle(
