@@ -68,3 +68,5 @@ flutter:
   assets:
 #    - assets/sound/drum_sound.mp3
     - assets/drum_sound.mp3
+    - assets/background.jpeg
+    - assets/background2.jpeg
