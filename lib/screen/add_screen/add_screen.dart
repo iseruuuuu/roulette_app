@@ -13,12 +13,14 @@ class AddScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0,
-        //TODO 色をiOSみたいにしたい!!
-        backgroundColor: Colors.blue,
+        elevation: 5,
+        backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () => controller.onTapTutorial(),
-          icon: const Icon(Icons.apps),
+          icon: const Icon(
+              Icons.apps,
+            color: Colors.black,
+          ),
         ),
         actions: [
           TextButton(
@@ -28,7 +30,7 @@ class AddScreen extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ),
