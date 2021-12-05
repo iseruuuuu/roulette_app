@@ -1,17 +1,10 @@
 # roulette_app
 
-A new Flutter project.
+| 登録画面 | ルーレット画面 |
+| :--- | :---: | 
+| ![tutorial1](https://user-images.githubusercontent.com/67954894/144747195-b4ae6a46-932e-4ea1-bf4b-d71c9fac41b0.gif) | ![tutorial2](https://user-images.githubusercontent.com/67954894/144747199-6bef633f-ae63-467e-832a-08725defebbe.gif) | 
+| TD | TD | 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # roulette_app
