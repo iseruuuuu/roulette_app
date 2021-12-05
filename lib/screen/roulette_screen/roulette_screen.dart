@@ -17,8 +17,7 @@ class RouletteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(RouletteScreenController(listItem: rouletteItem),
-        tag: rouletteItem[0].description);
+    final controller = Get.put(RouletteScreenController(listItem: rouletteItem), tag: rouletteItem[0].description);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
