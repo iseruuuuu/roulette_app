@@ -8,7 +8,6 @@ class AddScreenController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    _todos.addAll(Todo.initialTodos);
   }
 
 // TODO:フィルタの状態によって返すTodoを変える

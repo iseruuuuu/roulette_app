@@ -12,15 +12,15 @@ class Todo {
   // 説明【2】
   const Todo.withId({required this.id, required this.description});
 
-  // サンプルタスク
-  static const initialTodos = [
-    Todo.withId(
-      id: '0',
-      description: '犬の散歩',
-    ),
-    Todo.withId(
-      id: '1',
-      description: '犬の散歩',
-    ),
-  ];
+  // // サンプルタスク
+  // static const initialTodos = [
+  //   Todo.withId(
+  //     id: '0',
+  //     description: '犬の散歩',
+  //   ),
+  //   Todo.withId(
+  //     id: '1',
+  //     description: '犬の散歩',
+  //   ),
+  // ];
 }
