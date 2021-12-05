@@ -30,7 +30,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
               child: Container(
                 width: double.infinity,
                 height: 0.5,
-                color: Colors.white,
+                color: Colors.grey,
               ),
             ),
             Align(
@@ -39,12 +39,12 @@ class _TutorialScreenState extends State<TutorialScreen> {
                 indicatorCount: pageCount,
                 notifier: notifier,
                 activeIndicator: const Icon(
-                  Icons.analytics_outlined,
+                  Icons.filter_center_focus,
                   color: Colors.black,
                 ),
                 inActiveIndicator: const Icon(
-                  Icons.analytics_outlined,
-                  color: Colors.white,
+                  Icons.filter_center_focus,
+                  color: Colors.grey,
                 ),
                 margin: 8,
                 inactiveIndicatorSize: 25,
