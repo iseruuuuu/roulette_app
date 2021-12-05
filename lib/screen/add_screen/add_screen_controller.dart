@@ -35,12 +35,6 @@ class AddScreenController extends GetxController {
     if (todos.isEmpty) {
       print('空です');
     } else {
-
-      Set<Todo> todoList = todos.toSet();
-
-
-      print(todos[0].description);
-      print(todos.length);
       //とりあえず、空にする
       Get.to(() => RouletteScreen(rouletteItem: todos));
     }
