@@ -6,13 +6,28 @@ class Tutorial2Screen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
-      body: Container(),
+      body: Center(
+        child: Column(
+          children: const [
+            Text(
+              'チュートリアル②',
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            //TODO Gifを追加する（入力する姿）
+          ],
+        ),
+      ),
     );
   }
 }
