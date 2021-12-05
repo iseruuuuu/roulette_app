@@ -78,7 +78,6 @@ class AddScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    //TODO ボタンのデザインを変更したい!!
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         primary: Colors.white,
