@@ -10,7 +10,6 @@ class AddScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(AddScreenController());
     final deviceSize = MediaQuery.of(context).size;
-    Future.delayed(Duration.zero, () => controller.showAlert(context));
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
