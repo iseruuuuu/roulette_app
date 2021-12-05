@@ -14,6 +14,19 @@ class AddScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        actions: [
+          TextButton(
+            onPressed: () => controller.onTap(),
+            child: const Text(
+              '追加',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
@@ -22,8 +35,7 @@ class AddScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 10,
-              child: Obx(
-                () {
+              child: Obx(() {
                   final todos = controller.todos;
                   return ListView.builder(
                     itemCount: todos.length,

@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:roulette_app/model/todo.dart';
+import 'package:roulette_app/screen/roulette_screen/roulette_screen.dart';
 
 class AddScreenController extends GetxController {
   final _todos = <Todo>[].obs;
@@ -28,5 +29,20 @@ class AddScreenController extends GetxController {
 
   void onChanged(String text) {
     contents.value = text;
+  }
+
+  void onTap() {
+    if (todos.isEmpty) {
+      print('空です');
+    } else {
+
+      Set<Todo> todoList = todos.toSet();
+
+
+      print(todos[0].description);
+      print(todos.length);
+      //とりあえず、空にする
+      Get.to(() => RouletteScreen(rouletteItem: todos));
+    }
   }
 }
