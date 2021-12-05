@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:roulette_app/component/roulette_button.dart';
 import 'package:roulette_app/component/roulette_button_reset.dart';
 import 'package:roulette_app/component/roulette_text.dart';
+import 'package:roulette_app/main.dart';
 import 'package:roulette_app/model/todo.dart';
 import 'package:roulette_app/screen/roulette_screen/roulette_screen_controller.dart';
 
@@ -21,6 +22,10 @@ class RouletteScreen extends StatelessWidget {
         tag: rouletteItem[0].description);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
+      appBar: PreferredSize(
+        preferredSize: Size.zero,
+        child: AppBar(),
+      ),
       body: (rouletteItem.isNotEmpty)
           ? Center(
               child: Column(
