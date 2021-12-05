@@ -44,6 +44,7 @@ class HomeScreen extends StatelessWidget {
                               FortuneItem(
                                 child: RouletteText(
                                   text: index,
+                                  fontSize: 20,
                                 ),
                               ),
                             //TODO ここの値も変わる

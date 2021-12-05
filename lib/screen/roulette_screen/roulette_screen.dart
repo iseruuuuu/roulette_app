@@ -30,14 +30,9 @@ class RouletteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Spacer(),
-                  Obx(
-                    () => Text(
-                      '結果 : ${controller.resultText.value}',
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  Obx(() => RouletteText(
+                      text: '結果 : ${controller.resultText.value}',
+                      fontSize: 35,
                     ),
                   ),
                   const Spacer(),
@@ -51,6 +46,7 @@ class RouletteScreen extends StatelessWidget {
                         FortuneItem(
                           child: RouletteText(
                             text: index.description,
+                            fontSize: 20,
                           ),
                         ),
                     ],

@@ -4,17 +4,19 @@ class RouletteText extends StatelessWidget {
   const RouletteText({
     Key? key,
     required this.text,
+    required this.fontSize,
   }) : super(key: key);
 
   final String text;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: const TextStyle(
+      style: TextStyle(
         color: Colors.black,
-        fontSize: 20,
+        fontSize: fontSize,
         fontWeight: FontWeight.bold,
       ),
     );
