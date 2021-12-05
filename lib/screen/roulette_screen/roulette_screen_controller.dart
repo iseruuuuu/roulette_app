@@ -24,7 +24,6 @@ class RouletteScreenController extends GetxController {
     //ルーレットで値を入れる。
     streamController.add(n);
     //結果をテキストに反映する。
-
     await Future.delayed(const Duration(seconds: 3));
     resultText.value = listItem[n].description;
   }
