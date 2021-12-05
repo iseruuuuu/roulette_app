@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 import 'package:get/get.dart';
 import 'package:roulette_app/component/roulette_button.dart';
+import 'package:roulette_app/component/roulette_button_reset.dart';
 import 'package:roulette_app/component/roulette_text.dart';
 import 'package:roulette_app/model/todo.dart';
 import 'package:roulette_app/screen/roulette_screen/roulette_screen_controller.dart';
@@ -16,7 +17,8 @@ class RouletteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(RouletteScreenController(listItem: rouletteItem), tag: rouletteItem[0].description);
+    final controller = Get.put(RouletteScreenController(listItem: rouletteItem),
+        tag: rouletteItem[0].description);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
@@ -56,24 +58,7 @@ class RouletteScreen extends StatelessWidget {
                   const Spacer(),
                   RouletteButton(onTap: controller.onTap),
                   const Spacer(),
-                  GestureDetector(
-                    onTap: controller.onTapAddScreen,
-                    child: Container(
-                      color: Colors.grey,
-                      width: double.infinity,
-                      height: 60,
-                      child: const Center(
-                        child: Text(
-                          'データをセットしなおす',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  RouletteButtonReset(onTap: controller.onTapAddScreen),
                 ],
               ),
             )
