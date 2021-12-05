@@ -17,8 +17,9 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
       ),
       body:
-          //TODO 登録した時のlengthを後で入れる
-          (controller.item.value == 0)
+          //TODO 登録した時のlengthを後で入れる (一応できているけど、表示用に載せている)
+          (controller.todos.length == 0)
+              //(controller.todos.length != 0)
               ? Center(
                   child: Column(
                     children: [
@@ -38,6 +39,7 @@ class HomeScreen extends StatelessWidget {
                           duration: const Duration(seconds: 3),
                           selected: controller.streamController.stream,
                           items: [
+                            //for (var index in controller.items)
                             for (var index in controller.items)
                               FortuneItem(
                                 child: RouletteText(
