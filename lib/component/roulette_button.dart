@@ -6,7 +6,7 @@ class RouletteButton extends StatelessWidget {
     required this.onTap,
   }) : super(key: key);
 
-  final Function() onTap;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {

@@ -11,12 +11,14 @@ class RouletteScreenController extends GetxController {
   final resultText = '_______'.obs;
   final AudioCache _player = AudioCache();
   final List<Todo> listItem;
+  final isTap = true.obs;
 
   RouletteScreenController({
     required this.listItem,
   });
 
   void onTap() async {
+    isTap.value = false;
     //乱数の値のリストの文字を探していれる。
     var n = random.nextInt(listItem.length);
     //効果音を入れる。
@@ -26,6 +28,7 @@ class RouletteScreenController extends GetxController {
     //結果をテキストに反映する。
     await Future.delayed(const Duration(seconds: 3));
     resultText.value = listItem[n].description;
+    isTap.value = true;
   }
 
   void onTapAddScreen() {

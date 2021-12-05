@@ -17,7 +17,8 @@ class RouletteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(RouletteScreenController(listItem: rouletteItem), tag: rouletteItem[0].description);
+    final controller = Get.put(RouletteScreenController(listItem: rouletteItem),
+        tag: rouletteItem[0].description);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       body: (rouletteItem.isNotEmpty)
@@ -25,7 +26,8 @@ class RouletteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Spacer(),
-                  Obx(() => RouletteText(
+                  Obx(
+                    () => RouletteText(
                       text: '結果 : ${controller.resultText.value}',
                       fontSize: 30,
                     ),
@@ -47,7 +49,10 @@ class RouletteScreen extends StatelessWidget {
                     ],
                   ),
                   const Spacer(),
-                  RouletteButton(onTap: controller.onTap),
+                  Obx(() => RouletteButton(
+                      onTap: controller.isTap.value ? controller.onTap : null,
+                    ),
+                  ),
                   const Spacer(),
                   RouletteButtonReset(onTap: controller.onTapAddScreen),
                 ],
