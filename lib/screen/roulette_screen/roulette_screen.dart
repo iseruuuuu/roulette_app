@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:roulette_app/component/roulette_button.dart';
 import 'package:roulette_app/component/roulette_button_reset.dart';
 import 'package:roulette_app/component/roulette_text.dart';
-import 'package:roulette_app/main.dart';
 import 'package:roulette_app/model/todo.dart';
 import 'package:roulette_app/screen/roulette_screen/roulette_screen_controller.dart';
 
@@ -43,6 +42,13 @@ class RouletteScreen extends StatelessWidget {
                     animateFirst: false,
                     duration: const Duration(seconds: 3),
                     selected: controller.streamController.stream,
+                    styleStrategy: const UniformStyleStrategy(
+                      // TODO 数によって色を変化させたい
+                      color: Colors.white,
+                      borderWidth: 0,
+                      borderColor: Colors.cyan,
+                    ),
+                    // TODO ▲の色を変更させたい....(無理そう??)
                     items: [
                       for (var index in rouletteItem)
                         FortuneItem(
@@ -54,7 +60,8 @@ class RouletteScreen extends StatelessWidget {
                     ],
                   ),
                   const Spacer(),
-                  Obx(() => RouletteButton(
+                  Obx(
+                    () => RouletteButton(
                       onTap: controller.isTap.value ? controller.onTap : null,
                     ),
                   ),
