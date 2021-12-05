@@ -8,7 +8,7 @@ class RouletteScreenController extends GetxController {
   StreamController<int> streamController = StreamController<int>();
   final item = 0.obs;
   final random = math.Random();
-  final resultText = ''.obs;
+  final resultText = '_______'.obs;
   final AudioCache _player = AudioCache();
   final List<Todo> listItem;
 

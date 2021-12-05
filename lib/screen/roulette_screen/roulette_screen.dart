@@ -31,7 +31,7 @@ class RouletteScreen extends StatelessWidget {
                   const Spacer(),
                   Obx(() => RouletteText(
                       text: '結果 : ${controller.resultText.value}',
-                      fontSize: 35,
+                      fontSize: 30,
                     ),
                   ),
                   const Spacer(),
