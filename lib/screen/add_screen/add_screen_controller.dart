@@ -23,7 +23,7 @@ class AddScreenController extends GetxController {
   void sharedPreference() async {
     isTutorial.value = await Preference().getBool(PreferenceKey.isTutorial);
 
-    if (isTutorial.value) {
+    if (!isTutorial.value) {
       onTapTutorial();
     }
     await Preference().setBool(PreferenceKey.isTutorial, true);
