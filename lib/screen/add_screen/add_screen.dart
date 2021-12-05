@@ -14,6 +14,10 @@ class AddScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        leading: IconButton(
+          onPressed: () => controller.onTapTutorial(),
+          icon: const Icon(Icons.apps),
+        ),
         actions: [
           TextButton(
             onPressed: () => controller.onTap(),

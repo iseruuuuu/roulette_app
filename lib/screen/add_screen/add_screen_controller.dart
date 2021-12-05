@@ -24,11 +24,7 @@ class AddScreenController extends GetxController {
     isTutorial.value = await Preference().getBool(PreferenceKey.isTutorial);
 
     if (isTutorial.value) {
-      showCupertinoModalBottomSheet(
-        expand: true,
-        context: Get.context!,
-        builder: (context) => const TutorialScreen(),
-      );
+      onTapTutorial();
     }
     await Preference().setBool(PreferenceKey.isTutorial, true);
   }
@@ -61,5 +57,13 @@ class AddScreenController extends GetxController {
     } else {
       Get.to(() => RouletteScreen(rouletteItem: todos));
     }
+  }
+
+  void onTapTutorial() {
+    showCupertinoModalBottomSheet(
+      expand: true,
+      context: Get.context!,
+      builder: (context) => const TutorialScreen(),
+    );
   }
 }
