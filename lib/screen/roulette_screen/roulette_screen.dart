@@ -20,10 +20,6 @@ class RouletteScreen extends StatelessWidget {
     final controller = Get.put(RouletteScreenController(listItem: rouletteItem), tag: rouletteItem[0].description);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        elevation: 0,
-      ),
       body: (rouletteItem.isNotEmpty)
           ? Center(
               child: Column(
