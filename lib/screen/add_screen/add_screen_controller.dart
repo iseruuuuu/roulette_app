@@ -13,6 +13,8 @@ class AddScreenController extends GetxController {
   final contents = ''.obs;
   final isTutorial = false.obs;
 
+  List<Todo> get todos => _todos;
+
   @override
   void onInit() {
     super.onInit();
@@ -23,8 +25,7 @@ class AddScreenController extends GetxController {
   void sharedPreference() async {
     isTutorial.value = await Preference().getBool(PreferenceKey.isTutorial);
 
-    //初回起動のみ
-    if (!isTutorial.value) {
+    if (isTutorial.value) {
       showCupertinoModalBottomSheet(
         expand: true,
         context: Get.context!,
@@ -33,9 +34,6 @@ class AddScreenController extends GetxController {
     }
     await Preference().setBool(PreferenceKey.isTutorial, true);
   }
-
-// TODO:フィルタの状態によって返すTodoを変える
-  List<Todo> get todos => _todos;
 
   void addTodo(String description) {
     contents.value = description;
@@ -65,18 +63,5 @@ class AddScreenController extends GetxController {
     } else {
       Get.to(() => RouletteScreen(rouletteItem: todos));
     }
-  }
-
-  void showAlert(BuildContext context) async {
-    if (isTutorial.value) {
-      showDialog(
-        context: context,
-        builder: (context) => const AlertDialog(
-          content: Text("hi"),
-        ),
-      );
-      await Preference().setBool(PreferenceKey.isTutorial, false);
-    }
-    await Preference().setBool(PreferenceKey.isTutorial, false);
   }
 }
