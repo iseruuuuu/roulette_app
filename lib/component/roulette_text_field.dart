@@ -18,7 +18,7 @@ class RouletteTextField extends StatelessWidget {
         onSubmitted: onChanged,
         onChanged: onChanged,
         autocorrect: false,
-        maxLength: 15,
+        maxLength: 10,
         decoration: const InputDecoration(
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(
