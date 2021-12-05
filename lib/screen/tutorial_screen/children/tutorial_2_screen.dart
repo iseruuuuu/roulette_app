@@ -14,17 +14,42 @@ class Tutorial2Screen extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          children: const [
-            Text(
-              'チュートリアル②',
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 35,
-                fontWeight: FontWeight.bold,
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width - 40,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.black,
+                  width: 5,
+                ),
+              ),
+              child: const Text(
+                'チュートリアル②',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
-
-            //TODO Gifを追加する（入力する姿）
+            const Padding(
+              padding: EdgeInsets.only(top: 10, bottom: 10),
+              child: Text(
+                'あとはルーレットを回してみるだけ!!',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width - 30,
+              height: MediaQuery.of(context).size.height - 250,
+              child: Image.asset('assets/tutorial2.gif'),
+            ),
           ],
         ),
       ),

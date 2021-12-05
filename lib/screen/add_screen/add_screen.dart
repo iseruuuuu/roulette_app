@@ -56,6 +56,7 @@ class AddScreen extends StatelessWidget {
                 width: double.infinity,
                 color: Colors.white,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     SizedBox(
                       width: deviceSize.width - 120,

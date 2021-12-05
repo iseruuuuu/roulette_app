@@ -21,7 +21,6 @@ class AddScreenController extends GetxController {
   }
 
   void sharedPreference() async {
-    print(isTutorial.value);
     isTutorial.value = await Preference().getBool(PreferenceKey.isTutorial);
 
     //初回起動のみ
