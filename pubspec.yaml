@@ -39,6 +39,7 @@ dependencies:
   flutter_animator: 3.2.0
   flutter_fortune_wheel: ^1.1.1
   audioplayers: ^0.20.1
+  glassmorphism: ^3.0.0
 
 
 dev_dependencies:

@@ -40,7 +40,7 @@ class HomeScreenController extends GetxController {
 
     //乱数の値のリストの文字を探していれる。
 
-    //print(_todos[1].description);
+    //print(_todos[1].description)
 
     //効果音を入れたい
     _player.play('drum_sound.mp3');
