@@ -24,8 +24,7 @@ class AddScreen extends StatelessWidget {
           TextButton(
             onPressed: () => controller.onTap(),
             child: const Text(
-              //TODO 文言を変更したい!!
-              '追加',
+              'ルーレット',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
