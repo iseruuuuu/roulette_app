@@ -15,8 +15,12 @@ class AddScreenController extends GetxController {
   List<Todo> get todos => _todos;
 
   void addTodo(String description) {
-    final todo = Todo(description: contents.value);
-    _todos.add(todo);
+    contents.value = description;
+    if (contents.value == '') {
+    } else {
+      final todo = Todo(description: contents.value);
+      _todos.add(todo);
+    }
   }
 
   void remove(Todo todo) {
