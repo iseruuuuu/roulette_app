@@ -2,6 +2,8 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:get/get.dart';
 import 'package:roulette_app/model/todo.dart';
+import 'package:roulette_app/screen/add_screen/add_screen_controller.dart';
+import 'package:roulette_app/screen/roulette_screen/roulette_screen.dart';
 import 'dart:math' as math;
 import '../add_screen/add_screen.dart';
 
@@ -9,22 +11,9 @@ class RouletteScreenController extends GetxController {
   StreamController<int> streamController = StreamController<int>();
   final item = 0.obs;
   final random = math.Random();
-  final resultText = 'aaasss'.obs;
-
+  //後でいれる
+  final resultText = ''.obs;
   final AudioCache _player = AudioCache();
-
-  final items = <String>[
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-  ].obs;
-
-  final _todos = <Todo>[].obs;
-
-  List<Todo> get todos => _todos;
 
   @override
   void onInit() {
