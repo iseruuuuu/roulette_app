@@ -16,7 +16,7 @@ class RouletteScreenController extends GetxController {
     required this.listItem,
   });
 
-  void onTap() {
+  void onTap() async {
     //乱数の値のリストの文字を探していれる。
     var n = random.nextInt(listItem.length);
     //効果音を入れる。
@@ -24,6 +24,8 @@ class RouletteScreenController extends GetxController {
     //ルーレットで値を入れる。
     streamController.add(n);
     //結果をテキストに反映する。
+
+    await Future.delayed(const Duration(seconds: 3));
     resultText.value = listItem[n].description;
   }
 
