@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:roulette_app/component/roulette_text_field.dart';
 import '../../component/roulette_list.dart';
 import 'add_screen_controller.dart';
 
@@ -66,17 +67,9 @@ class AddScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
-                      width: deviceSize.width - 120,
-
-                      //TODO 文字のサイズとかを調整したい!!
-                      child: TextField(
-                        onChanged: (text) => controller.onChanged(text),
-                        style: const TextStyle(
-                          fontSize: 30.0,
-                          color: Colors.black,
-                        ),
-                      ),
+                    RouletteTextField(
+                      deviceSize: deviceSize.width - 120,
+                      onChanged: (text) => controller.onChanged(text),
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
