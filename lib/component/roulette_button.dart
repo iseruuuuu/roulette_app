@@ -17,9 +17,10 @@ class RouletteButton extends StatelessWidget {
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
           primary: Colors.white,
+          elevation: 20,
         ),
         child: const Text(
-          'Start',
+          'START',
           style: TextStyle(
             color: Colors.black,
             fontSize: 30,

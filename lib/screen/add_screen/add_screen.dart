@@ -44,8 +44,7 @@ class AddScreen extends StatelessWidget {
           children: [
             Expanded(
               flex: 10,
-              child: Obx(
-                () {
+              child: Obx(() {
                   final todos = controller.todos;
                   return ListView.builder(
                     itemCount: todos.length,
