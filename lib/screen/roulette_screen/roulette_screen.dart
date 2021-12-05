@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 import 'package:get/get.dart';
+import 'package:roulette_app/component/roulette_button.dart';
 import 'package:roulette_app/component/roulette_text.dart';
 import 'package:roulette_app/model/todo.dart';
 import 'package:roulette_app/screen/roulette_screen/roulette_screen_controller.dart';
@@ -19,7 +20,7 @@ class RouletteScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
-        backgroundColor: Colors.amber,
+        backgroundColor: Colors.black,
         elevation: 0,
       ),
       body: (rouletteItem.isNotEmpty)
@@ -27,11 +28,12 @@ class RouletteScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const Spacer(),
-                  Obx(() => Text(
-                      '結果 : ${controller.resultText.value} ',
+                  Obx(
+                    () => Text(
+                      '結果 : ${controller.resultText.value}',
                       style: const TextStyle(
                         color: Colors.black,
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -52,24 +54,7 @@ class RouletteScreen extends StatelessWidget {
                     ],
                   ),
                   const Spacer(),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 2,
-                    height: MediaQuery.of(context).size.width / 7,
-                    child: ElevatedButton(
-                      onPressed: controller.onTap,
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
-                      ),
-                      child: const Text(
-                        'Start',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
+                  RouletteButton(onTap: controller.onTap),
                   const Spacer(),
                   GestureDetector(
                     onTap: controller.onTapAddScreen,
