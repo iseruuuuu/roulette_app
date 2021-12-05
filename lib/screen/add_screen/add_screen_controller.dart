@@ -1,11 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:roulette_app/model/todo.dart';
 import 'package:roulette_app/preference/preference.dart';
 import 'package:roulette_app/screen/roulette_screen/roulette_screen.dart';
-
 import '../tutorial_screen/tutorial_screen.dart';
 
 class AddScreenController extends GetxController {
